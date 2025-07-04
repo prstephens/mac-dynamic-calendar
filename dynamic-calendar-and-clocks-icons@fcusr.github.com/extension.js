@@ -310,7 +310,7 @@ function repaintCalendar(icon) {
     let maxWidth = iconSize / 96 * themeData.dayMonthMaxWidth;
     do {
         let desc = ' font_desc="' + fontFace + ' ' + fontSize + 'px"';
-        layout.set_markup('<span' + desc + '>' + text.toUpperCase() + '</span>', -1);
+        layout.set_markup('<span' + desc + '>' + text + '</span>', -1);
         fontSize -= iconSize / 96;
     } while(layout.get_pixel_size()[0] > maxWidth && fontSize > 0);
     let textX = (iconSize - layout.get_pixel_size()[0]) / 2;
